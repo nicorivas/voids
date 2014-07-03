@@ -23,6 +23,8 @@ INSTALLATION
 
     Not needed, as it is a script.
     Python 2.7 is needed.
+    python-tk package is needed. In Ubuntu:
+	sudo apt-get install python-tk
 
 USAGE
 

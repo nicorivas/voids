@@ -1,13 +1,5 @@
 #!/usr/bin/env python
 
-#===============================================================================
-#
-# Computes the number of convective cells in Leidenfrost geometry.
-# Interpolates averaged density fields, and then counts the maximums
-# using a cut value.
-#
-#===============================================================================
-
 import os
 import sys
 import math
