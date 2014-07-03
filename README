@@ -12,9 +12,9 @@ crystalline states"
 
 For each particle, all three particle combinations of neighbors is
 considered, defining neighboring triangles. For each neighboring
-triangle we compute it's internal apollonius circle. This circle is
+triangle we compute its internal apollonius circle. This circle is
 highly related to the free volume of the particle as, when normalized by
-the central particle's radius, a value less than 1 indicates a channel
+the central particle's radius, a value less than one indicates a channel
 through which the particle can't go through.
 
 For more information about the analysis, please refer to the paper.
@@ -29,11 +29,11 @@ USAGE
     ./voids.py 'input_file_name' 'output_file_name' --periodic
 
     'input_file_name':
-        Particles number, positions and radii in the file 'input'.
+        Particles' number, positions and radii in the file 'input'.
         First line of input should be the number of particles.
-        The rest of the lines should be the information of every
+        The rest of the lines should be the data for every
         particle, in the form 'x y z r', with r the radius of the
-        particle and x, y and z it's coordinates.
+        particle and x, y and z its coordinates.
 
         Example:
 
