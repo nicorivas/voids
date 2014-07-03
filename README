@@ -1,0 +1,60 @@
+voids.py
+
+v0.01: Implemented.
+
+Computes the size of every channel in a pack of spheres, as defined in
+the paper:
+
+"Structure characterization of hard sphere packings in amorphous and
+crystalline states"
+    Vitaliy Ogarko, Nicolas Rivas, Stefan Luding
+    http://arxiv.org/abs/1405.5032
+
+For each particle, all three particle combinations of neighbors is
+considered, defining neighboring triangles. For each neighboring
+triangle we compute it's internal apollonius circle. This circle is
+highly related to the free volume of the particle as, when normalized by
+the central particle's radius, a value less than 1 indicates a channel
+through which the particle can't go through.
+
+For more information about the analysis, please refer to the paper.
+
+INSTALLATION
+
+    Not needed, as it is a script.
+    Python 2.7 is needed.
+
+USAGE
+
+    ./voids.py 'input_file_name' 'output_file_name' --periodic
+
+    'input_file_name':
+        Particles number, positions and radii in the file 'input'.
+        First line of input should be the number of particles.
+        The rest of the lines should be the information of every
+        particle, in the form 'x y z r', with r the radius of the
+        particle and x, y and z it's coordinates.
+
+        Example:
+
+        6
+        0.260179625853 0.583565147482 0.142286768849 0.0320041717773
+        0.164713950323 0.7764730607 0.27015467405 0.0320041717773
+        0.357592198576 0.75252722197 0.0642448910503 0.0320041717773
+        0.250547945298 0.253359791735 0.254628654942 0.0320041717773
+        0.712575326809 0.343368869233 0.948802280038 0.0320041717773
+        0.518625358274 0.645391370379 0.721315845511 0.0320041717773
+
+        A sample input file 'input' is included for reference and for
+        testing purposes.
+
+    'output_file_name'
+        Filename of the output data.
+        Each line contains, first, the particle index of the center
+        particle of the corresponding triangle, then the position of the
+        channel projected in the triangle's plane, and finally the
+        radius of the channel.
+
+    --periodic
+        If the system has periodic boundary conditions. Only full
+        periodic boundaries (in every direction) are supported for now.
